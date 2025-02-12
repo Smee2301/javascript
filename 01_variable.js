@@ -3,7 +3,7 @@
 const accountid = 76122351 
 let a = "jaipur"
 let accout_pass = "Hello_72e6"
-state = "Gujarat"
+state = "Gujarat" 
 
 let UML 
 /*
