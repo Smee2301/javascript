@@ -7,9 +7,35 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <h3>Enter your details</h3>
     <form action="succees.html" method="post">
         <div class="container">
-            <label>Name: <input type/></label>
+            <div class="nameage">
+                <!-- When user clicks the label text:  the input automatically gets focus. -->
+                <label for="name">Name*: <input type="text" id="name" placeholder="Enter name"/></label>
+                <label for="age">Age*: <input type="text" id="age" placeholder="Enter age"/></label>
+            </div>
+            
+            </div class="gender">
+                <label for="male">male <input type="radio" id="male" value="male" name="gen"/></label>
+                <label for="female">female <input type="radio" id="female" name="gen"/></label>
+                <label for="other">other <input type="radio" id="other" name="gen"/></label>
+            </div>
+
+            <div class="email">
+                <label for="email">Mail*: <input type="email" id="email" placeholder="Enter Mail"/></label>
+            </div>
+
+            <div class="password">
+                <label for="password">password*: <input id="password" type="password"></label>
+                <label for="confirmpass">confirm password*: <input id="confirmpass" type="password"></label>
+            </div>
+
+            <div class="file">
+                <input type="file" id="file" >
+            </div>
+
+            <button type="button" >Submit</button>
         </div>
     </form>
     <script src="index.js"></script>
