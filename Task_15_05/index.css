@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap:10px;
+    border: 2px solid black;
+    min-height: 500px;
+    background-color:bisque;   
+}
+.State{
+    margin-bottom: 20px;
+}
+
+#btn{
+    width: 40px;
+    margin-left: 10px;
+}

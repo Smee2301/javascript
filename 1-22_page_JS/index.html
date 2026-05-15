@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     function FunctionName(){
+        alert("i am function in script tag and inside the HTML code")
+     }  
+
+     function WriteFunction(){
+      document.write(5+6+9);
+      console.log("20") 
+     }
+    </script>
+</head>
+<body>
+
+    <h1 id="demo">i am h1 tag before click now .. </h1>
+    <!-- <button onclick='document.querySelector("#demo").innerHTML="<p style=\"color:red;\">i am h1 tag After click</p>"'>click</button> -->
+    <button onclick='document.querySelector("#demo").innerHTML=Date()'>click</button>
+    <button onclick="FunctionName()">Try it</button>
+    <img src="public/ROG 4.jpg" style="height: 50px; width:50px;">
+    <button onclick="WriteFunction()">write</button>
+    <script src="index.js"></script>
+</body>
+</html>
