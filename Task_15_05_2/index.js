@@ -17,6 +17,11 @@ function Checkpass(){
     let special = false;
 
     let hasspecial = "!@#$%^&*()"
+
+    if(password.length < 8){
+        alert("password length is atleast 8");
+        return false;
+     }
     
     for(let i = 0; i < password.length; i++){
         
@@ -55,13 +60,7 @@ function Checkpass(){
         alert("password must include special character")
         return false;
     }
-     
-     if(password.length < 8){
-        alert("password length is atleast 8");
-        return false;
-     }
-
-
+    
      if(password != confirmpass){
             alert("password not match renter");
             return false;
@@ -81,6 +80,7 @@ function Checkmail(){
     }
     return true
 }
+
 
 function Filesubmit(){
     let file = document.querySelector("#file").files[0]; //files is an array-like list of selected files. //files → all selected files // [0] → first selected file
@@ -104,7 +104,8 @@ function Filesubmit(){
     return true;
 }
 
-function Submit(){
+let btn = document.querySelector("#button");
+btn.addEventListener("click",()=>{
 
 let name = document.querySelector("#name").value;
 let age = document.querySelector("#age").value;    
@@ -161,4 +162,8 @@ let other = document.querySelector("#other");
         console.log("other");
     }
     return true;
-}
+})
+
+
+// let btn = document.querySelector("#button");
+// btn.addEventListener("click", Submit)
