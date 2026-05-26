@@ -86,6 +86,24 @@
     // f1()
 
 
+    function getdata(data,nextdata){
+        setTimeout(()=>{
+            console.log(data);
+            if(nextdata){
+            nextdata();
+            }
+        },2000)
+    }
+
+    // getdata(1,
+    //     getdata(2)  //error occur because this is normal function so imidiately exicute
+    // )
+
+    getdata(1,()=>{ // now make arrow function it's called proper function so it exicute after 2 second 
+        getdata(2,()=>{ 
+            getdata(3,)
+        })
+    })
 
   
 
