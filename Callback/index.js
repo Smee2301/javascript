@@ -68,42 +68,42 @@
 
 //Asyncronous with callback hell
 //callback hell : Callback hell specifically , means:nested asynchronous callbacks
-    // function f1(){
-    //     console.log("f1 is exicute");
-    //     setTimeout(()=>{
-    //         function f2(){
-    //         console.log("f2 is exicute");
-    //         setTimeout(()=>{
-    //              function f3(){
-    //             console.log("f3 is exicute");
-    //         }
-    //         f3()
-    //         },2000)
-    //     }
-    //     f2()
-    //     },2000)
-    // }
-    // f1()
-
-
-    function getdata(data,nextdata){
+    function f1(){
+        console.log("f1 is exicute");
         setTimeout(()=>{
-            console.log(data);
-            if(nextdata){
-            nextdata();
+            function f2(){
+            console.log("f2 is exicute");
+            setTimeout(()=>{
+                 function f3(){
+                console.log("f3 is exicute");
             }
+            f3()
+            },2000)
+        }
+        f2()
         },2000)
     }
+    f1()
+
+
+    // function getdata(data,nextdata){
+    //     setTimeout(()=>{
+    //         console.log(data);
+    //         if(nextdata){
+    //         nextdata();
+    //         }
+    //     },2000)
+    // }
 
     // getdata(1,
     //     getdata(2)  //error occur because this is normal function so imidiately exicute
     // )
 
-    getdata(1,()=>{ // now make arrow function it's called proper function so it exicute after 2 second 
-        getdata(2,()=>{ 
-            getdata(3,)
-        })
-    })
+    // getdata(1,()=>{ // now make arrow function it's called proper function so it exicute after 2 second 
+    //     getdata(2,()=>{ 
+    //         getdata(3,)
+    //     })
+    // })
 
   
 

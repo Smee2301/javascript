@@ -83,19 +83,23 @@ function asysnc1(data){
 
 console.log("data1 fetching.......");
 asysnc1(101)
-.then((res)=>{
+.then(()=>{
     console.log("data2 fetching.......");
     return asysnc1(102)
-    .then((res)=>{
+})
+
+.then(()=>{
         console.log("data3 fetching.......");
         return asysnc1(103)
-        .then((res)=>{
+})
+
+.then(()=>{
             console.log("data4 fetching........");
             return asysnc1(104)
-            .then(()=>{
-            })
-        })
-    })
+})
+
+.catch((err)=>{
+    console.log(err);
 })
 //Promises
 // const fetchdata = new Promise((res,rej)=>{
